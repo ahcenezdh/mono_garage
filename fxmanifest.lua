@@ -1,15 +1,10 @@
 fx_version 'cerulean'
-
 game 'gta5'
-
 name 'mono_garage'
-
 repository 'https://github.com/Mono-94/mono_garage'
-
 version '1.1.2'
-
 author 'Symbiote#3027'
-
+lua54 'yes'
 
 shared_scripts {
     '@es_extended/imports.lua',
@@ -17,7 +12,6 @@ shared_scripts {
     'config_garage.lua',
     'config_keys.lua',
 }
-
 
 client_scripts {
     'client/*.lua',
@@ -28,10 +22,6 @@ server_scripts {
     'server/*.lua'
 }
 
-
 files {
     'locales/*.json',
-
 }
-
-lua54 'yes'
