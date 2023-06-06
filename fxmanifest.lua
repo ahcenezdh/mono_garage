@@ -1,10 +1,14 @@
 fx_version 'cerulean'
-game 'gta5'
-name 'mono_garage'
-repository 'https://github.com/Mono-94/mono_garage'
-version '1.1.2'
-author 'Symbiote#3027'
+use_experimental_fxv2_oal 'yes'
 lua54 'yes'
+game 'gta5'
+
+
+name 'mono_garage'
+author 'Symbiote#3027'
+version '1.1.2'
+repository 'https://github.com/Mono-94/mono_garage'
+description 'Garage system using ESX for FiveM'
 
 shared_scripts {
     '@es_extended/imports.lua',

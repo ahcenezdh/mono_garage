@@ -141,7 +141,7 @@ CreateThread(function()
                             icon = 'fas fa-car',
                             label = locale('SacarVehiculooo'),
                             onSelect = function()
-                                if IsPedInAnyVehicle(PlayerPedId(), false) then
+                                if IsPedInAnyVehicle(cache.ped, false) then
                                     TriggerEvent('mono_garage:Notification', locale('SalirVehiculo'))
                                 else
                                     OpenGarage({
@@ -241,7 +241,7 @@ CreateThread(function()
                                     icon = 'car',
                                     onSelect = function()
                                         if v.job == ESX.PlayerData.job.name then
-                                            if IsPedInAnyVehicle(PlayerPedId(), false) then
+                                            if IsPedInAnyVehicle(cache.ped, false) then
                                                 TriggerEvent('mono_garage:Notification', locale('SalirVehiculo'))
                                             else
                                                 OpenGarage({
@@ -252,7 +252,7 @@ CreateThread(function()
                                                 })
                                             end
                                         elseif v.job == false then
-                                            if IsPedInAnyVehicle(PlayerPedId(), false) then
+                                            if IsPedInAnyVehicle(cache.ped, false) then
                                                 TriggerEvent('mono_garage:Notification', locale('SalirVehiculo'))
                                             else
                                                 OpenGarage({

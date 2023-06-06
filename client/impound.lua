@@ -8,8 +8,7 @@
 
 
 function NPCImpoundGarage(impound)
-    local playerPed = PlayerPedId()
-    local playerPos = GetEntityCoords(playerPed)
+    local playerPos = GetEntityCoords(cache.ped)
     local npcHash = GetHashKey(Garage.NpcImpound.NpcHash)
     local vehicle = lib.getClosestVehicle(cache.coords, 7.0, false)
     local plate = GetVehicleNumberPlateText(vehicle)
@@ -26,7 +25,7 @@ function NPCImpoundGarage(impound)
             SetRelationshipBetweenGroups(0, GetHashKey("PLAYER"), GetPedRelationshipGroupHash(npcPed))
 
 
-            SetEntityNoCollisionEntity(npcPed, playerPed, true)
+            SetEntityNoCollisionEntity(npcPed, cache.ped, true)
             SetEveryoneIgnorePlayer(npcPed, true)
 
             Wait(1000)
