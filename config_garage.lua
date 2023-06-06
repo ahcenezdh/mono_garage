@@ -29,18 +29,18 @@ Garage.OwnerCarAdmin = {
 }
 
 Garage.AutoImpound = {
-    
-    AutoImpound = true,         -- This function allows vehicles that are outside the garage and the entity is not present in the world to be sent directly to the impound.
 
-    ImpoundIn = 'Auto Impound', -- The default impound where the vehicle will be sent if the entity does not exist in the world. (It has to match with an impound created.)
+        AutoImpound = true,         -- This function allows vehicles that are outside the garage and the entity is not present in the world to be sent directly to the impound.
 
-    TimeCheck = 1000 * 4,      -- (Default 1min) Time to check for vehicles that do not exist in the world and are not found in the garage in order to impound them.
+        ImpoundIn = 'Auto Impound', -- The default impound where the vehicle will be sent if the entity does not exist in the world. (It has to match with an impound created.)
+
+        TimeCheck = 1000 * 4,      -- (Default 1min) Time to check for vehicles that do not exist in the world and are not found in the garage in order to impound them.
 }
 
 Garage.Persistent = {
     persitenent = false,
     debug = false
-} 
+}
 
 --<-------------------------------------->--
 
@@ -70,7 +70,7 @@ Garage.NpcImpound = {
         [4] = 'paletoems',
         [5] = 'trafico',
         [6] = 'mechanic'
-        --[420] = '',   -- Add more jobs
+    --[420] = '',   -- Add more jobs
     }
 }
 
@@ -136,21 +136,21 @@ Garage.Garages = {
         heading      = 250.1240,
         SetInToVehicle = true,
         spawnpos     = {
-             vec4(220.2780456543, -809.17193603516,30.056179046631,249.62936401367),
-             vec4(221.07490539551, -806.69848632813, 30.390104293823, 248.47229003906),
-             vec4(222.11103820801, -804.14074707031, 30.38419342041, 246.64263916016),
-             vec4(223.20907592773, -801.78698730469, 30.369050979614, 247.40501403809),
-             vec4(206.27438354492, -801.09350585938, 30.711149215698, 247.7689666748),
-             vec4(207.43371582031, -798.52429199219, 30.690946578979, 247.72959899902),
-             vec4(208.2936706543, -796.23156738281, 30.672399520874, 248.55288696289),
-             vec4(209.48155212402, -793.83129882813, 30.646259307861, 249.14572143555),
-             vec4(215.1284942627, -804.10589599609, 30.347541809082, 69.22452545166),
-             vec4(216.35070800781, -801.84881591797, 30.325912475586, 68.610794067383),
-             vec4(217.4236907959, -799.2294921875, 30.309574127197, 67.479904174805),
-             vec4(218.359375, -796.85687255859, 30.297718048096, 67.339340209961),
-             vec4(233.58877563477, -805.39239501953, 29.968862533569, 69.095611572266),
-             vec4(232.12843322754, -807.85375976563, 29.973529815674, 68.418014526367),
-             vec4(231.43034362793, -810.4765625, 30.428318023682, 68.37825012207)
+            vec4(220.2780456543, -809.17193603516,30.056179046631,249.62936401367),
+            vec4(221.07490539551, -806.69848632813, 30.390104293823, 248.47229003906),
+            vec4(222.11103820801, -804.14074707031, 30.38419342041, 246.64263916016),
+            vec4(223.20907592773, -801.78698730469, 30.369050979614, 247.40501403809),
+            vec4(206.27438354492, -801.09350585938, 30.711149215698, 247.7689666748),
+            vec4(207.43371582031, -798.52429199219, 30.690946578979, 247.72959899902),
+            vec4(208.2936706543, -796.23156738281, 30.672399520874, 248.55288696289),
+            vec4(209.48155212402, -793.83129882813, 30.646259307861, 249.14572143555),
+            vec4(215.1284942627, -804.10589599609, 30.347541809082, 69.22452545166),
+            vec4(216.35070800781, -801.84881591797, 30.325912475586, 68.610794067383),
+            vec4(217.4236907959, -799.2294921875, 30.309574127197, 67.479904174805),
+            vec4(218.359375, -796.85687255859, 30.297718048096, 67.339340209961),
+            vec4(233.58877563477, -805.39239501953, 29.968862533569, 69.095611572266),
+            vec4(232.12843322754, -807.85375976563, 29.973529815674, 68.418014526367),
+            vec4(231.43034362793, -810.4765625, 30.428318023682, 68.37825012207)
         },
         blip         = true,
         sprite       = 50,
@@ -172,7 +172,7 @@ Garage.Garages = {
         SetInToVehicle = true,
         spawnpos     = {
             { x = 1695.2021484375, y = 4940.17578125, z = 41.75191116333, w = 99.631744384766},
-   
+
 
         },
         blip         = true,
@@ -492,10 +492,10 @@ Garage.Garages = {
     },
 }
 
---<-------------------------------------->--
---Notification
-RegisterNetEvent('mono_garage:Notification')
-AddEventHandler('mono_garage:Notification', function(msg)
+--[[
+    Event for using notification
+]]
+RegisterNetEvent('mono_garage:Notification', function(msg)
     lib.notify({
         title = locale('Garaje'),
         description = msg,
